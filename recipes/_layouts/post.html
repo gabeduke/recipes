@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <section class="content">
+    {{ content }}
+  </section>
+  <section class="meta">
+    <h3>Tags</h3>
+    <ul>
+      {% for tag in page.tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Ingredients</h3>
+    <ul>
+      {% for ingredient in page.ingredients %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
