@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Spicy Grilled Wings with Tahini-Tomato Glaze"
+date: 2024-09-17
+categories: [dinner, grill, chicken]
 tags: ["dinner", "grill", "chicken"]
 ingredients: ["chicken wings", "garlic", "onion", "jalapeño", "lime", "Vietnamese coriander", "coconut aminos", "olive oil", "soy sauce", "fish sauce", "cherry tomatoes", "honey", "tahini", "quinoa", "zucchini"]
+excerpt: "Crispy grilled wings with a tangy tahini-tomato glaze, served with lime-herb quinoa and grilled zucchini."
+prep_time: "15 min"
+cook_time: "30 min (+2–4 hr marinade)"
+servings: 4
+dietary_info: "Gluten-Free option, Dairy-Free"
 ---
 
 ### Spicy Grilled Wings with Tahini-Tomato Glaze

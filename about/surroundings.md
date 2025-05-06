@@ -14,6 +14,5 @@ You realize that this site is much more than just recipes. It’s a **cookbook o
 
 **What will you do next?**
 - [Return to the Start](/about/)
-- [Explore the Trail of Tags](/tag/)
 - [Check your Inventory](/about/inventory/)
 - [Approach the Creator](/about/creator/)

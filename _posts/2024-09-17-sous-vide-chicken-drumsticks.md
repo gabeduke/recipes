@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Sous Vide Chicken Drumsticks"
+date: 2024-09-17
+categories: [dinner, camping]
 tags: ["10 o'clock", "sous vide", "grill", "camping"]
 ingredients: ["chicken drumsticks", "olive oil", "garlic", "lemon", "jalapenos", "coconut milk"]
+excerpt: "Juicy chicken drumsticks cooked sous vide, then crisped over the campfire. Includes a coconut milk dipping sauce."
+prep_time: "10 min"
+cook_time: "1.5 hr sous vide, 5–7 min grill"
+servings: 4
+dietary_info: "Gluten-Free, Dairy-Free, Paleo"
 ---
 
 ### Instructions

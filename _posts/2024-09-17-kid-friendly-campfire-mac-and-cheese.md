@@ -1,7 +1,15 @@
 ---
 layout: post
 title: "Kid-Friendly Campfire Mac and Cheese"
+date: 2024-09-17
+categories: [dinner, camping]
 tags: ["dinner", "camping", "gluten-free", "alpha-gal-safe", "kid-friendly"]
+ingredients: ["gluten-free pasta", "butter", "gluten-free flour", "milk", "cheese", "salt", "pepper", "mustard powder", "paprika"]
+excerpt: "A creamy, crowd-pleasing mac and cheese that's familiar for kids and flavorful enough for adults. Campfire and oven options included."
+prep_time: "15 min"
+cook_time: "20 min"
+servings: 4
+dietary_info: "Gluten-Free, Alpha-Gal Safe, Kid-Friendly, Vegetarian option"
 ---
 
 # Kid-Friendly Campfire Mac and Cheese (Gluten-Free, Alpha-Gal Safe)

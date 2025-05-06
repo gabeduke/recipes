@@ -17,7 +17,7 @@ title: Recipe Book
 <div class="recipe-grid">
   {% for post in site.posts %}
     <div class="recipe-card" data-tags="{{ post.tags | join: ' ' | slugify }}">
-      <a href="{{ post.url }}">
+      <a href="{{ post.url | relative_url }}">
         <div class="recipe-card-content">
           <h2 class="recipe-title">{{ post.title }}</h2>
           <p class="recipe-desc">{{ post.excerpt | strip_html | truncate: 120 }}</p>

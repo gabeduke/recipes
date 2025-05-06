@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Banana Bread"
+date: 2024-09-17
+categories: [baking, dessert]
 tags: ["dessert", "baking", "gift"]
 ingredients: ["flour", "baking soda", "salt", "sugar", "butter", "eggs", "vanilla extract", "bananas"]
+excerpt: "A pantry-friendly banana bread base mix, perfect for gifts or quick baking. Customizable with your favorite mix-ins."
+prep_time: "10 min"
+cook_time: "50–60 min"
+servings: 8
+dietary_info: "Vegetarian"
 ---
 
 # Banana Bread Base Mix (Pantry & Gift Version)
