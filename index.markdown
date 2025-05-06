@@ -8,10 +8,44 @@ title: Recipe Book
 
 <div class="tag-filters">
   <button class="tag-filter active" data-tag="all">All</button>
-  {% assign all_tags = site.tags | sort %}
-  {% for tag in all_tags %}
-    <button class="tag-filter" data-tag="{{ tag[0] | slugify }}">{{ tag[0] }}</button>
-  {% endfor %}
+  <div class="tag-category">
+    <strong>Meal Type:</strong>
+    <button class="tag-filter" data-tag="breakfast">Breakfast</button>
+    <button class="tag-filter" data-tag="dinner">Dinner</button>
+    <button class="tag-filter" data-tag="appetizer">Appetizer</button>
+    <button class="tag-filter" data-tag="dessert">Dessert</button>
+  </div>
+  <div class="tag-category">
+    <strong>Protein:</strong>
+    <button class="tag-filter" data-tag="chicken">Chicken</button>
+    <button class="tag-filter" data-tag="fish">Fish</button>
+    <button class="tag-filter" data-tag="vegetarian">Vegetarian</button>
+    <button class="tag-filter" data-tag="beans">Beans</button>
+    <button class="tag-filter" data-tag="lentils">Lentils</button>
+    <button class="tag-filter" data-tag="mushroom">Mushroom</button>
+  </div>
+  <div class="tag-category">
+    <strong>Dietary:</strong>
+    <button class="tag-filter" data-tag="gluten-free">Gluten-Free</button>
+    <button class="tag-filter" data-tag="dairy-free">Dairy-Free</button>
+    <button class="tag-filter" data-tag="alpha-gal-safe">Alpha-Gal Safe</button>
+  </div>
+  <div class="tag-category">
+    <strong>Method:</strong>
+    <button class="tag-filter" data-tag="grill">Grill</button>
+    <button class="tag-filter" data-tag="oven">Oven</button>
+    <button class="tag-filter" data-tag="sous-vide">Sous Vide</button>
+    <button class="tag-filter" data-tag="one-pot">One Pot</button>
+    <button class="tag-filter" data-tag="batch-cooking">Batch Cooking</button>
+    <button class="tag-filter" data-tag="meal-prep">Meal Prep</button>
+  </div>
+  <div class="tag-category">
+    <strong>Other:</strong>
+    <button class="tag-filter" data-tag="camping">Camping</button>
+    <button class="tag-filter" data-tag="kid-friendly">Kid-Friendly</button>
+    <button class="tag-filter" data-tag="quick">Quick</button>
+    <button class="tag-filter" data-tag="weeknight">Weeknight</button>
+  </div>
 </div>
 
 <div class="recipe-grid">
@@ -111,6 +145,15 @@ document.addEventListener('DOMContentLoaded', function() {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7em;
+}
+.tag-category {
+  margin-bottom: 1em;
+}
+.tag-category strong {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  color: #4b3f2a;
 }
 .tag-filter {
   background: #e0cfa9;
