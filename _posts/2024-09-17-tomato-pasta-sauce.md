@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Tomato Pasta Sauce with Roasted Peppers"
+date: 2024-09-17
+categories: [sauce, vegetarian, pasta]
 tags: ["pasta", "sauce", "vegetarian"]
 ingredients: ["olive oil", "yellow onion", "garlic", "whole peeled tomatoes", "salt", "black pepper", "dried oregano", "roasted red peppers", "red pepper flakes", "fresh basil"]
+excerpt: "A flexible tomato sauce for pasta, with sautéed onions, garlic, and optional roasted peppers."
+prep_time: "10 min"
+cook_time: "30–60 min"
+servings: 4
+dietary_info: "Vegetarian, Gluten-Free, Vegan option"
 ---
 
 # Tomato Pasta Sauce with Roasted Peppers

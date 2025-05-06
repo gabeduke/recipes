@@ -5,6 +5,12 @@ layout: default
 <article>
   <header>
     <h1>{{ page.title }}</h1>
+    <ul class="recipe-meta">
+      {% if page.prep_time %}<li><strong>Prep Time:</strong> {{ page.prep_time }}</li>{% endif %}
+      {% if page.cook_time %}<li><strong>Cook Time:</strong> {{ page.cook_time }}</li>{% endif %}
+      {% if page.servings %}<li><strong>Servings:</strong> {{ page.servings }}</li>{% endif %}
+      {% if page.dietary_info %}<li><strong>Dietary Info:</strong> {{ page.dietary_info }}</li>{% endif %}
+    </ul>
   </header>
   <section class="content">
     {{ content }}
@@ -23,5 +29,13 @@ layout: default
         <li>{{ ingredient }}</li>
       {% endfor %}
     </ul>
+    {% if page.categories %}
+    <h3>Categories</h3>
+    <ul>
+      {% for category in page.categories %}
+        <li><a href="/category/index.html#{{ category | slugify }}">{{ category }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </section>
 </article>

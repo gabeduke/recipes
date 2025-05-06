@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Sous Vide Salmon with Lemon and Herbs"
+date: 2024-09-17
+categories: [dinner, camping, fish]
 tags: ["fish", "grill", "camping", "sous vide"]
 ingredients: ["salmon", "lemon", "basil", "thyme", "olive oil"]
+excerpt: "Perfectly tender salmon cooked sous vide, then crisped over the fire with lemon and herbs."
+prep_time: "5 min"
+cook_time: "30–45 min sous vide, 5 min grill"
+servings: 2
+dietary_info: "Pescatarian, Gluten-Free, Dairy-Free"
 ---
 
 ### Instructions

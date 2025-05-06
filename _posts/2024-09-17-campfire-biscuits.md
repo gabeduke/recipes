@@ -1,8 +1,15 @@
 ---
 layout: post
 title: "Campfire Biscuits"
+date: 2024-09-17
+categories: [breakfast, camping]
 tags: ["breakfast", "grill", "dutch-oven", "camping"]
 ingredients: ["flour", "milk", "butter", "baking powder", "salt"]
+excerpt: "Easy, fluffy biscuits made in a Dutch oven over the campfire. Perfect for breakfast at camp."
+prep_time: "10 min"
+cook_time: "20 min"
+servings: 6
+dietary_info: "Vegetarian"
 ---
 
 ### Instructions
