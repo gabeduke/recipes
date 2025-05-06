@@ -1,0 +1,8 @@
+# Configuration for issue template chooser
+blank_issues_enabled: true
+contact_links:
+  - name: Questions or Feedback
+    url: https://github.com/gabeduke/recipes/discussions
+    about: Please use GitHub Discussions for general questions or feedback.
+# You can add 'issue_template:' to set a default template if desired.
+# See https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
