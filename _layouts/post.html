@@ -2,40 +2,162 @@
 layout: default
 ---
 
-<article>
-  <header>
+<article class="recipe-article">
+  <header class="recipe-header-card">
     <h1>{{ page.title }}</h1>
-    <ul class="recipe-meta">
-      {% if page.prep_time %}<li><strong>Prep Time:</strong> {{ page.prep_time }}</li>{% endif %}
-      {% if page.cook_time %}<li><strong>Cook Time:</strong> {{ page.cook_time }}</li>{% endif %}
-      {% if page.servings %}<li><strong>Servings:</strong> {{ page.servings }}</li>{% endif %}
-      {% if page.dietary_info %}<li><strong>Dietary Info:</strong> {{ page.dietary_info }}</li>{% endif %}
+    <ul class="recipe-meta-card">
+      {% if page.prep_time %}<li>⏱️ <strong>Prep:</strong> {{ page.prep_time }}</li>{% endif %}
+      {% if page.cook_time %}<li>🔥 <strong>Cook:</strong> {{ page.cook_time }}</li>{% endif %}
+      {% if page.servings %}<li>🍽️ <strong>Servings:</strong> {{ page.servings }}</li>{% endif %}
+      {% if page.dietary_info %}<li>🥗 <strong>Diet:</strong> {{ page.dietary_info }}</li>{% endif %}
     </ul>
   </header>
-  <section class="content">
-    {{ content }}
-  </section>
-  <section class="meta">
-    <h3>Tags</h3>
-    <ul>
-      {% for tag in page.tags %}
-        <li><a href="/tag/{{ tag | slugify }}.html">{{ tag }}</a></li>
-      {% endfor %}
-    </ul>
-
-    <h3>Ingredients</h3>
-    <ul>
-      {% for ingredient in page.ingredients %}
-        <li>{{ ingredient }}</li>
-      {% endfor %}
-    </ul>
-    {% if page.categories %}
-    <h3>Categories</h3>
-    <ul>
-      {% for category in page.categories %}
-        <li><a href="/category/index.html#{{ category | slugify }}">{{ category }}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </section>
+  <div class="recipe-cards">
+    <section class="recipe-card collapsible-card">
+      <button class="card-toggle" type="button">🥕 Ingredients</button>
+      <div class="card-content">
+        <ul>
+          {% for ingredient in page.ingredients %}
+            <li>{{ ingredient }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    <section class="recipe-card collapsible-card">
+      <button class="card-toggle" type="button">📝 Instructions</button>
+      <div class="card-content">
+        <div class="instructions-content">
+          {{ content | markdownify }}
+        </div>
+      </div>
+    </section>
+    <section class="recipe-card collapsible-card">
+      <button class="card-toggle" type="button">🏷️ Tags</button>
+      <div class="card-content">
+        <ul class="tag-list">
+          {% for tag in page.tags %}
+            <li><a href="/tag/{{ tag | slugify }}.html">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </div>
 </article>
+
+<style>
+.recipe-article {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.recipe-header-card {
+  background: #fffbe9;
+  border: 1px solid #e0cfa9;
+  border-radius: 1em 1em 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2em 2em 1em 2em;
+  text-align: center;
+}
+.recipe-header-card h1 {
+  margin-top: 0;
+}
+.recipe-meta-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  font-size: 1.1em;
+  color: #4b3f2a;
+}
+.recipe-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 0;
+}
+.recipe-card {
+  background: #fffbe9;
+  border: 1px solid #e0cfa9;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2em;
+  margin-bottom: 0;
+}
+.recipe-card h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #a67c00;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.instructions-content {
+  line-height: 1.7;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tag-list li a {
+  background: #e0cfa9;
+  color: #4b3f2a;
+  border-radius: 0.5em;
+  padding: 0.2em 0.7em;
+  font-size: 0.95em;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.tag-list li a:hover {
+  background: #4b3f2a;
+  color: #fffbe9;
+}
+.collapsible-card .card-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: #a67c00;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 1em;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.15s;
+}
+.collapsible-card .card-toggle.collapsed {
+  color: #4b3f2a;
+}
+.collapsible-card .card-content {
+  transition: max-height 0.25s cubic-bezier(0.4,0,0.2,1), opacity 0.2s;
+  overflow: hidden;
+  max-height: 2000px;
+  opacity: 1;
+}
+.collapsible-card .card-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.collapsible-card .card-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('collapsed');
+      btn.classList.toggle('collapsed');
+    });
+  });
+});
+</script>

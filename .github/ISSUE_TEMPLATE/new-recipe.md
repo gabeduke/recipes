@@ -15,7 +15,6 @@ body:
         layout: post
         title: "<Recipe Name>"
         date: YYYY-MM-DD
-        categories: [<category1>, <category2>]
         tags: [<tag1>, <tag2>, ...]
         ingredients: [<ingredient1>, <ingredient2>, ...]
         excerpt: "<Short description for card previews>"
